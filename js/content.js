@@ -1,43 +1,36 @@
 console.log("i'm here, i'm here!!!");
 
-// if (navigator.storage && navigator.storage.persist) {
-//   navigator.storage.persist().then(granted => {
-//     if (granted)
-//       alert("Storage will not be cleared except by explicit user action");
-//     else
-//       alert("Storage may be cleared by the UA under storage pressure.");
-//   });
-// }
-
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	console.log(request.message1);
-  	var imgf1 = request.message1;
-  	// $('#planted').parent().append("<img	src="	+	imgf1	+	"	class='planted'>");
-  	$("header").after("<img	src="	+	imgf1	+	"	class='planted'>");
-  	$imgp1.hide();
+  	console.log(request.message);
+  	var imgf1 = request.message;
+  	$("body").prepend("<img	src="	+	imgf1	+	"	class='planted'>");
   }
 );
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	console.log(request.message2);
-  	var imgp1 = request.message2;
-  	// $('#planted').parent().append("<img	src="	+	imgf1	+	"	class='planted'>");
-  	$("header").after("<img	src="	+	imgp1	+	"	class='planted'>");
-  }
-);
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	console.log(request.message3);
-  	var imgs1 = request.message3;
-  	// $('#planted').parent().append("<img	src="	+	imgf1	+	"	class='planted'>");
-  	$("header").after("<img	src="	+	imgs1	+	"	class='planted'>");
-  }
-);
+// chrome.runtime.onMessage.addListener(
+//   function(request, sender, sendResponse) {
+//   	console.log(request.message);
+//   	var imgp1 = request.message;
+//   	// $('#planted').parent().append("<img	src="	+	imgf1	+	"	class='planted'>");
+//   	$("header").after("<img	src="	+	imgp1	+	"	class='planted'>");
+//   }
+// );
+// chrome.runtime.onMessage.addListener(
+//   function(request, sender, sendResponse) {
+//   	console.log(request.message);
+//   	var imgs1 = request.message;
+//   	// $('#planted').parent().append("<img	src="	+	imgf1	+	"	class='planted'>");
+//   	$("header").after("<img	src="	+	imgs1	+	"	class='planted'>");
+//   }
+// );
 
+// 	var imgf2 = chrome.runtime.getURL("../images/f_3.png");
+// 	var imgp2 = chrome.runtime.getURL("../images/p_3.png");
+// 	var imgs2 = chrome.runtime.getURL("../images/s_3.png");
 
-// $("body").on("click", function() {
-// 	$("body").css("background-color", "#7C8557")
+// $("imgf1").on("click", function() {
+// 	$("this").hide();
+// 	$("imgf2").show();
 
 // });
 

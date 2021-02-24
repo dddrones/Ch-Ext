@@ -1,7 +1,7 @@
 {
     "manifest_version": 2, 
     "name": "Plant Friend",
-    "description": "Grow plants on your web page!",
+    "description": "Get plants on your browser!",
     "version": "1.0",
     "permissions": ["activeTab", "storage"],
     "content_scripts": [
@@ -12,9 +12,16 @@
             "css": ["/css/style.css", "/css/button.css"]
        }
      ],
+     "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
     "action": {
         "default_icon": {
-            "32":"/images/icon.png"
+            "16":"/images/icon16.png", 
+            "32":"/images/icon32.png",
+            "48":"/images/icon48.png",
+            "128":"/images/icon128.png"
         },
         "default_popup": "popup.html"
     },
