@@ -1,7 +1,7 @@
 {
     "manifest_version": 2, 
     "name": "Plant Friend",
-    "description": "Get plants on your browser!",
+    "description": "Fill your page with plants!",
     "version": "1.0",
     "permissions": ["activeTab", "storage"],
     "content_scripts": [
